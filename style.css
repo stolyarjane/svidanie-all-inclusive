@@ -1,0 +1,86 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.marquee {
+  background-color: transparent;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  height: 60px; /* выше по высоте */
+}
+
+.marquee span {
+  display: inline-block;
+  font-size: 40px; /* крупнее */
+  font-weight: bold;
+  color: #ccff00;
+  white-space: nowrap;
+  line-height: 60px;
+  animation: marquee 15s linear infinite;
+  padding-left: 100%; /* старт за экраном */
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 12s linear infinite;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.floaties-container {
+  background-image: url('https://res.cloudinary.com/donsephuh/image/upload/v1752662668/__1_egtolj.jpg');
+  background-size: cover;
+  background-repeat: repeat-y;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  gap: 30px;
+}
+
+.floatie {
+  width: 90vw;
+  max-width: 300px;
+  height: 120px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ссылки на картинки-надувашки */
+#floatie1 { background-image: url('https://res.cloudinary.com/donsephuh/image/upload/v1752662519/Group_1_vdjpsd.png'); }
+#floatie2 { background-image: url('https://res.cloudinary.com/donsephuh/image/upload/v1752662519/Group_2_ymzeoy.png'); }
+#floatie3 { background-image: url('https://res.cloudinary.com/donsephuh/image/upload/v1752662519/Group_3_zgemfp.png'); }
+#floatie4 { background-image: url('https://res.cloudinary.com/donsephuh/image/upload/v1752662519/Group_6_hncp3a.png'); }
+#floatie5 { background-image: url('https://res.cloudinary.com/donsephuh/image/upload/v1752662519/Group_5_fiahfr.png'); }
+#floatie6 { background-image: url('https://res.cloudinary.com/donsephuh/image/upload/v1752662520/Group_7_iqglce.png'); }
+
+footer {
+  background: black;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.footer-text {
+  color: white;
+  font-size: 12px;
+}
+
